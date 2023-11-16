@@ -15,7 +15,7 @@ The dataset used for this analysis contains comprehensive customer information, 
 ## Machine Learning for Attrition Prediction
 - Built a Random Forest Classifier to predict customer attrition based on selected features.
 - Split the data into training and testing sets for model evaluation.
-- Achieved an accuracy of ____ on the test set.
+- Achieved an accuracy of 85% on the test set.
 - Evaluated the model's performance using classification metrics, including precision, recall, and F1-score.
 
 ## Customer Profiling and Persona Development
