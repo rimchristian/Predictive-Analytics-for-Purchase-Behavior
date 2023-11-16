@@ -41,13 +41,6 @@ The dataset used for this analysis contains comprehensive customer information, 
 - Developed personas, including descriptions of each group, to guide marketing and retention strategies.
 
 
-
-
-## Recommendations
-- Provided actionable recommendations for the credit card provider based on the analysis and personas.
-- Suggested tailored marketing campaigns and retention strategies for specific customer segments.
-- Highlighted key insights into customer behavior and attrition risk factors.
-
 1. Persona 1: "Young Professionals"
 Age: 25-35
 Income category: High
@@ -72,6 +65,22 @@ Total Revolving Balance: Moderate
 Utilization Ratio: Moderate
 Attrition Risk: Moderate
 Description: Customers who actively use their credit cards but maintain moderate balances. Moderate attrition risk.
+
+## Recommendations for tailoring services and marketing strategies
+1. Young Professionals:
+- Offer credit limit increases for responsible credit card users.
+- Promote exclusive benefits and rewards for high-income customers.
+- Provide educational content on responsible credit card management.
+
+2. Mature Savers:
+- Highlight savings and investment features of credit cards.
+- Offer premium services for loyal, low-risk customers.
+- Create targeted campaigns for wealth-building opportunities.
+
+3. Credit Card Enthusiasts:
+- Encourage higher credit card utilization with attractive rewards.
+- Promote balance transfer options for customers with moderate balances.
+- Provide personalized recommendations for cashback and rewards.
 
 
 
