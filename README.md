@@ -12,6 +12,10 @@ The dataset used for this analysis contains comprehensive customer information, 
 - Selected relevant features, such as age, income category, credit limit, total revolving balance, and utilization ratio.
 - Explored relationships between customer demographics and attrition rates using visualizations, including box plots, count plots, and scatter plots.
 
+![customer age ](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/a60f0bf5-5fa8-411e-aaa5-77674e8e22a1)
+
+  
+
 ## Machine Learning for Attrition Prediction
 - Built a Random Forest Classifier to predict customer attrition based on selected features.
 - Split the data into training and testing sets for model evaluation.
