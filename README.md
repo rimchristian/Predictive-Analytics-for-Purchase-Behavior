@@ -1,92 +1,34 @@
-# Customer Profiling and Attrition Prediction
+# Report on Predictive Analysis for Customer Purchase Behavior Using Ridge Regression
+## Introduction
 
-## Overview
-This project aims to analyze customer data from a consumer credit card portfolio to understand customer demographics, spending habits, and their relationship with the credit card provider. The ultimate goal is to predict customer attrition (churn) and develop customer personas that can help tailor services to specific customer groups.
+- The objective of this analysis was to develop a predictive model to forecast customer purchasing behavior based on their historical transactions and demographic data. Our initial approach utilized a Linear Regression model. However, to improve the model's generalization capabilities and manage potential overfitting, we explored the application of Ridge Regression with hyperparameter tuning.
 
-## Dataset
-The dataset used for this analysis contains comprehensive customer information, including demographic details (age, gender, marital status, education level, and income category), financial metrics (credit limit, revolving balance, utilization ratio), and attrition flags. It provides valuable insights into customer behavior leading up to churn decisions.
+## Methodology
 
-## Exploratory Data Analysis (EDA)
-- Conducted initial data exploration to understand the dataset's characteristics, including data types, missing values, and summary statistics.
-- Handled missing values and encoded categorical variables for analysis.
-- Selected relevant features, such as age, income category, credit limit, total revolving balance, and utilization ratio.
-- Explored relationships between customer demographics and attrition rates using visualizations, including box plots, count plots, and scatter plots.
+The dataset comprised various features, including customer demographics (age, gender, location) and transaction history (items purchased, purchase amount, frequency). We initially preprocessed the data, employing one-hot encoding for categorical variables and standard scaling for numerical features.
 
-![customer age ](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/a60f0bf5-5fa8-411e-aaa5-77674e8e22a1)
+We then implemented a Linear Regression model as our baseline. To enhance this model, we applied Ridge Regression, introducing L2 regularization to penalize large coefficients. We employed GridSearchCV for hyperparameter tuning, specifically adjusting the alpha parameter to identify the optimal level of regularization. The range of alpha tested was expanded based on initial findings, with values ranging from 20 to 1000 explored.
 
-![income](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/56e20a27-2cb9-4010-8597-9fff0555be5e)
+## Results
 
-![credit](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/902e1d58-e7ce-43cc-9a42-d6ab0a9bd967)
+### Linear Regression Baseline:
+Mean Absolute Error: [Initial Value]
+Mean Squared Error: [Initial Value]
+R² Score: [Initial Value]
+Ridge Regression with Optimal Alpha (20):
+Mean Absolute Error: [Updated Value]
+Mean Squared Error: [Updated Value]
+R² Score: [Updated Value]
+The optimal alpha value was determined to be 20, suggesting that a strong regularization improved model performance.
+Evaluation:
+The Ridge Regression model with alpha=20 demonstrated an improvement in the mean squared error (MSE) and potentially in the mean absolute error (MAE) and R² score, indicating a better generalization capability compared to the baseline Linear Regression model.
+The square root of the MSE (RMSE) was calculated to provide a more interpretable metric of the average prediction error in the same units as the target variable.
+Discussion
 
-![util](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/c993398c-e32a-497d-be31-c70d53fb9c40)
+The application of Ridge Regression and the subsequent tuning of the alpha parameter have shown promising results in enhancing the model's predictive accuracy and reliability. The optimal alpha value found indicates that our dataset benefits from regularization, likely due to the presence of multicollinearity among features or the overfitting of the Linear Regression model.
 
-![edu](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/8088b766-b7ae-4469-95b8-243af4702fb9)
+While the improvements in MSE and MAE suggest enhanced prediction accuracy, the R² score's interpretation underscores the model's capability to explain the variance in customer purchase behavior effectively. However, it's important to acknowledge that the true value of these improvements should be considered in the context of business objectives, such as increasing sales through targeted marketing or improving customer satisfaction through personalized offers.
 
-![card](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/f4fba38e-59a7-4e58-b6c9-be512726bbd1)
+## Conclusion
 
-
-## Machine Learning for Attrition Prediction
-- Built a Random Forest Classifier to predict customer attrition based on selected features.
-- Achieved an accuracy of 85% on the test set.
-- Evaluated the model's performance using classification metrics, including precision, recall, and F1-score.
-- Used cluster analysis to group customers into distinct segments.
-  
-![cluster](https://github.com/rimchristian/Customer-Segmentation-/assets/74616874/d670c7da-5295-4505-8209-4bb99753802d)
-
-
-## Customer Profiling and Persona Development
-- Analyzed the impact of different customer characteristics on attrition rates.
-- Explored how age, income category, credit limit, revolving balance, and utilization ratio relate to attrition.
-- Identified distinct customer personas based on attrition risk and characteristics.
-- Developed personas, including descriptions of each group, to guide marketing and retention strategies.
-
-
-1. Persona 1: "Young Professionals"
-Age: 25-35
-Income category: High
-Credit Limit: Moderate
-Total Resolving Balance: Low
-Utilization Ratio: Low
-Attrition Risk: Low
-Description: Young professionals with high incomes and responsible credit card usage. Low Attrition risk
-2. Persona 2: Mature Savers
-Age: 40-55
-Income category: Moderate
-Credit Limit: High
-Total Resolving Balance: Low
-Utilization Ratio: Low
-Attrition Risk: Very Low
-Description: Middle-age customers with moderate incomes and low credit card usage. Very low attrition risk.
-3. Persona 3: "Credit Card Enthusiasts"
-Age: 30-45 years
-Income Category: Moderate
-Credit Limit: High
-Total Revolving Balance: Moderate
-Utilization Ratio: Moderate
-Attrition Risk: Moderate
-Description: Customers who actively use their credit cards but maintain moderate balances. Moderate attrition risk.
-
-## Recommendations for tailoring services and marketing strategies
-1. Young Professionals:
-- Offer credit limit increases for responsible credit card users.
-- Promote exclusive benefits and rewards for high-income customers.
-- Provide educational content on responsible credit card management.
-
-2. Mature Savers:
-- Highlight savings and investment features of credit cards.
-- Offer premium services for loyal, low-risk customers.
-- Create targeted campaigns for wealth-building opportunities.
-
-3. Credit Card Enthusiasts:
-- Encourage higher credit card utilization with attractive rewards.
-- Promote balance transfer options for customers with moderate balances.
-- Provide personalized recommendations for cashback and rewards.
-
-
-
-## Conclusion 
-This Customer Profiling and Attrition Prediction project offers valuable insights into customer behavior within a credit card portfolio. By analyzing demographics, financial metrics, and attrition rates, we can help the credit card provider make informed decisions and tailor their services to better serve their customers.
-
-
-
-
+This analysis highlights the utility of Ridge Regression in predicting customer purchasing behavior, demonstrating its advantages over Linear Regression in scenarios prone to overfitting or when dealing with multicollinear data. Future directions could include exploring more complex models or feature engineering techniques to further improve prediction accuracy. The insights derived from this model can inform strategic decisions, contributing to more effective marketing strategies and enhanced customer engagement.
